@@ -1,0 +1,1 @@
+{"version":3,"file":"sidePanel.d.ts","sourceRoot":"","sources":["../../../../../src/components/navigation/sidePanel.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AAKzB,aAAK,cAAc,GAAG;IACpB,KAAK,CAAC,EAAE,KAAK,CAAC,aAAa,CAAA;IAC3B,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAA;CAC3B,CAAA;AAED,QAAA,MAAM,SAAS,wBAAyB,cAAc,gBAMrD,CAAA;AAeD,eAAe,SAAS,CAAA"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"onBoadingView.d.ts","sourceRoot":"","sources":["../../../../../src/components/view/onBoadingView.tsx"],"names":[],"mappings":"AAIA,aAAK,kBAAkB,GAAG;IACxB,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,WAAW,CAAC,EAAE,MAAM,CAAA;IACpB,QAAQ,CAAC,EAAE,MAAM,CAAA;IACjB,OAAO,EAAE,MAAM,IAAI,CAAA;CACpB,CAAA;AAED,QAAA,MAAM,aAAa,8CAAuD,kBAAkB,gBAY3F,CAAA;AAgDD,eAAe,aAAa,CAAA"}
