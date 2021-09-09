@@ -1,0 +1,60 @@
+  
+name: publish
+env:
+  CI: true
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "!*"
+jobs:
+  release:
+    name: Setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: setup Node
+        uses: actions/setup-node@v1
+        with:
+          always-auth: true
+          node-version: 14.x
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@party-opu'
+      - name: install
+        run: yarn
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_TOKEN }}
+      - name: publish
+        run: |
+          npx can-npm-publish --verbose && yarn publish || echo "Does not publish"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_TOKEN }}
+      # Push tag to GitHub if package.json version's tag is not tagged
+      - name: package-version
+        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+      - name: package-version-to-git-tag
+        uses: pkgdeps/action-package-version-to-git-tag@v2
+        with:
+          github_token: ${{ secrets.GIT_TOKEN }}
+          github_repo: ${{ github.repository }}
+          version: ${{ env.PACKAGE_VERSION }}
+          git_commit_sha: ${{ github.sha }}
+          git_tag_prefix: "v"
+  dispatch:
+    needs: release
+    strategy:
+      matrix:
+        repo: ['party-opu/funii-assist-web', 'party-opu/funii-assist-web-template']
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+          repository: ${{ matrix.repo }}
+          event-type: update-packages
+          client-payload: '{"packages": "@${{ github.repository }}"}'

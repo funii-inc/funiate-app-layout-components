@@ -1,0 +1,51 @@
+import styled from 'styled-components'
+import Layout, { ComponentArea, Spacer, Heading, SubHeading } from './layout'
+
+<Heading>View</Heading>
+
+<Spacer size="xxl" />
+
+<SubHeading>OnBoadingView</SubHeading>
+
+<Spacer size="l" />
+
+```jsx
+import React from 'react'
+import { OnBoadingView } from '@party-opu/funii-assist-app-builder-resource-components'
+
+const Page = () => <OnBoadingView />
+
+export default Page
+```
+
+<Spacer size="xxl" />
+
+<SubHeading>TabView</SubHeading>
+
+<Spacer size="l" />
+
+```jsx
+import React from 'react'
+import { TabView } from '@party-opu/funii-assist-app-builder-resource-components'
+
+const Page = ({ children }) => <TabView>{children}</TabView>
+
+export default Page
+```
+
+<Spacer size="xxl" />
+
+<SubHeading>ScreenView</SubHeading>
+
+<Spacer size="l" />
+
+```jsx
+import React from 'react'
+import { ScreenView } from '@party-opu/funii-assist-app-builder-resource-components'
+
+const Page = ({ children }) => <ScreenView>{children}</ScreenView>
+
+export default Page
+```
+
+export default ({ children }) => <Layout>{children}</Layout>
