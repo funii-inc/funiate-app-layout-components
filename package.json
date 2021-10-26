@@ -1,12 +1,12 @@
 {
-  "name": "@party-opu/funii-assist-app-builder-resource-components",
-  "version": "0.0.1",
+  "name": "@funii-inc/funii-assist-app-builder-resource-components",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/party-opu/funii-assist-app-builder-resource-components.git",
+  "repository": "https://github.com/funii-inc/funii-assist-app-builder-resource-components.git",
   "author": "kosaku kurino <kousaku.maron@gmail.com>",
   "license": "MIT",
   "scripts": {
