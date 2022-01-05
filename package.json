@@ -1,6 +1,6 @@
 {
   "name": "@funii-inc/funiate-app-layout-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -35,11 +35,11 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "peerDependencies": {
+    "@funii-inc/funiate-types": ">=0.3.17",
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0",
     "react-icons": ">=3.0.0",
-    "styled-components": ">=5.2.1",
-    "@funii-inc/funiate-types": ">=0.3.17"
+    "styled-components": ">=5.2.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.4",
