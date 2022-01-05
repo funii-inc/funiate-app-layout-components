@@ -1,12 +1,12 @@
 {
-  "name": "@funii-inc/funii-assist-app-builder-resource-components",
+  "name": "@funii-inc/funiate-app-layout-components",
   "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/funii-inc/funii-assist-app-builder-resource-components.git",
+  "repository": "https://github.com/funii-inc/funiate-app-layout-components.git",
   "author": "kosaku kurino <kousaku.maron@gmail.com>",
   "license": "MIT",
   "scripts": {
