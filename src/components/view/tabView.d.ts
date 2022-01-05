@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProps } from '@funii-inc/funiate-types';
 declare type MenuItem = {
     id: string;
     title: string;
@@ -20,7 +21,8 @@ declare type TabViewProps = {
     headerShown?: boolean;
     headerTitle?: string;
     headerStyle?: React.CSSProperties;
+    theme?: ThemeProps;
 };
-declare const TabView: ({ menuItems, activeMenuID, tabItems, activeTabID, children, screenStyle, headerShown, headerTitle, headerStyle, }: TabViewProps) => JSX.Element;
+declare const TabView: ({ menuItems, activeMenuID, tabItems, activeTabID, children, screenStyle, headerShown, headerTitle, headerStyle, theme, }: TabViewProps) => JSX.Element;
 export default TabView;
 //# sourceMappingURL=tabView.d.ts.map
