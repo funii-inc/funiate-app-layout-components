@@ -986,6 +986,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@funii-inc/funiate-types@^0.3.17":
+  version "0.3.17"
+  resolved "https://npm.pkg.github.com/download/@funii-inc/funiate-types/0.3.17/4ca63d32df6c15bff55470df904769ba5193ad4babb370f2f6f3f712b3d3225c#ab9e7c11ddedd20ef105a2026ccedc2bc0a792a3"
+  integrity sha512-CG0A3zQL5lIZCTOxHbzAa/vsYv4KFogPmAmj0QLZ1cy3asfzAmOewm40emXooysIqFcREpJ5ROzsfseASbwe6A==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"

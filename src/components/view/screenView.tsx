@@ -1,7 +1,10 @@
 import React from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
+import { ThemeProps } from '@funii-inc/funiate-types'
 import IconButton from '../general/iconButton'
 import AppBar from '../navigation/appBar'
+// import transpiler from '../transpiler'
+// import defaultTheme from '../defaultTheme'
 
 type ScreenViewProps = {
   children?: React.ReactNode
@@ -10,6 +13,7 @@ type ScreenViewProps = {
   headerShown?: boolean
   headerTitle?: string
   headerStyle?: React.CSSProperties
+  theme?: ThemeProps
 }
 
 const ScreenView = ({ children, goBack, screenStyle = {}, headerShown = true, headerTitle = '', headerStyle = {} }: ScreenViewProps) => {

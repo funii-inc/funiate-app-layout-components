@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Layout: React.FC = ({ children }) => (
   <Root>
     <Header>
-      <HeaderTitle>funii-assist-app-builder-resource-components</HeaderTitle>
+      <HeaderTitle>funiate-app-layout-components</HeaderTitle>
     </Header>
     <Container>{children}</Container>
   </Root>

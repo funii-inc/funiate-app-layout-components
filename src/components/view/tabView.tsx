@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { IoMdMenu } from 'react-icons/io'
-import { MdBlock } from 'react-icons/md'
+import { ThemeProps } from '@funii-inc/funiate-types'
 import IconButton from '../general/iconButton'
 import AppBar from '../navigation/appBar'
 import SidePanel from '../navigation/sidePanel'
 import Drawer from '../feedback/drawer'
 import List from '../dataDisplay/list'
+import transpiler from '../transpiler'
+import defaultTheme from '../defaultTheme'
 
 type MenuItem = {
   id: string
@@ -31,6 +33,7 @@ type TabViewProps = {
   headerShown?: boolean
   headerTitle?: string
   headerStyle?: React.CSSProperties
+  theme?: ThemeProps
 }
 
 const TabView = ({
@@ -43,6 +46,7 @@ const TabView = ({
   headerShown = true,
   headerTitle = '',
   headerStyle = {},
+  theme = defaultTheme,
 }: TabViewProps) => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
@@ -67,11 +71,17 @@ const TabView = ({
             {tabItems.map((item) => {
               return (
                 <List.Item key={item.id} onClick={item.onClick}>
-                  <List.ItemIcon style={activeTabID === item.id ? { color: '#2d2e33' } : {}}>
-                    {/* TODO: iconどうするか.... */}
+                  {/* TODO: iconどうするか.... */}
+                  {/* <List.ItemIcon style={activeTabID === item.id ? { color: '#2d2e33' } : {}}>
                     <MdBlock size={24} />
-                  </List.ItemIcon>
-                  <List.ItemText style={activeTabID === item.id ? { fontWeight: 'bold', color: '#2d2e33' } : {}}>{item.title}</List.ItemText>
+                  </List.ItemIcon> */}
+                  <List.ItemText
+                    active={activeTabID === item.id}
+                    color={transpiler.toCssColor(theme.palette.text.secondary.color)}
+                    activeColor={transpiler.toCssColor(theme.palette.text.primary.color)}
+                  >
+                    {item.title}
+                  </List.ItemText>
                 </List.Item>
               )
             })}
@@ -79,7 +89,7 @@ const TabView = ({
         </SidePanel>
         <Content>{children}</Content>
       </Row>
-      <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
+      <Drawer open={showMenu} onClose={() => setShowMenu(false)} bgColor={transpiler.toCssColor(theme.palette.background.paper.color)}>
         <List>
           {menuItems.map((item) => {
             return (
@@ -90,7 +100,13 @@ const TabView = ({
                   setShowMenu(false)
                 }}
               >
-                <List.ItemText style={activeMenuID === item.id ? { fontWeight: 'bold', color: '#2d2e33' } : {}}>{item.title}</List.ItemText>
+                <List.ItemText
+                  active={activeMenuID === item.id}
+                  color={transpiler.toCssColor(theme.palette.text.secondary.color)}
+                  activeColor={transpiler.toCssColor(theme.palette.text.primary.color)}
+                >
+                  {item.title}
+                </List.ItemText>
               </List.Item>
             )
           })}
