@@ -1,6 +1,6 @@
-# funii-assist-app-builder-resource-components
+# funiate-app-layout-components
 
-**[github-pages](https://funii-inc.github.io/funii-assist-app-builder-resource-components/)**
+**[github-pages](https://funii-inc.github.io/funiate-app-layout-components/)**
 
 ## Contribute
 
@@ -18,10 +18,9 @@ GitHub Packagesで公開する場合、レジストリを登録する必要が�
 
 ```
 // with npm
-npm install @funii-inc/funii-assist-app-builder-resource-components
-
+npm install @funii-inc/funiate-app-layout-components
 // with yarn
-yarn add @funii-inc/funii-assist-app-builder-resource-components
+yarn add @funii-inc/funiate-app-layout-components
 ```
 
 ## Peer Dependencies
