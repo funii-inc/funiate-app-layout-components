@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const IconButton = styled.button`
+const IconButton = styled.button<{ color?: string }>`
   padding: 12px;
   border-radius: 50%;
-  color: inherit;
+  color: ${({ color = 'inherit' }) => color};
   cursor: pointer;
   border: 0;
   outline: 0;

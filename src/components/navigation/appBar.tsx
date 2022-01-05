@@ -31,9 +31,9 @@ export const Toolbar = styled.div`
   padding-right: 24px;
 `
 
-export const AppBarTitle = styled.h1`
+export const AppBarTitle = styled.h1<{ color?: string }>`
   /* font-size: 0.875rem; */
-  color: inherit;
+  color: ${({ color = 'inherit' }) => color};
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.43;
